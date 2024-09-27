@@ -71,7 +71,7 @@ require_once 'include/Employer.php';
 
     // Чтение всех сотрудников
     $employers = $connection->query("SELECT * FROM employers");
-    echo 'Новые сотрудник до обновления данных<br>';
+    echo 'Новые сотрудники до обновления данных<br>';
     while ($row = $employers->fetch_assoc()) {
         ?>
         <pre>
