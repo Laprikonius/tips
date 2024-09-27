@@ -138,16 +138,18 @@ require_once 'include/Employer.php';
     }
 
     // Удаление сотрудника
-    foreach ($employers as $key => $employ)
+    foreach ($employers as $key => $employ) {
         if ($employer->delete($employ['id'])) {
             echo "Сотрудник с ID: " . $employ['id'] . " удален.<br>";
         }
+    }
 
     // Удаление компании (вместе с сотрудниками)
-    foreach ($companies as $key => $comp)
+    foreach ($companies as $key => $comp) {
         if ($company->delete($comp['id'])) {
             echo "Компания с ID: " . $comp['id'] . " удалена.<br>";
         }
+    }
 
     db_disconnect($connection);
     ?>
