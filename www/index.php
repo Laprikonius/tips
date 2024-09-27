@@ -127,7 +127,7 @@ require_once 'include/Employer.php';
     }
 
     // Чтение всех сотрудников после обновления
-    $employers = $connection->query("SELECT * FROM employers");
+    $employers = $connection->query("SELECT * FROM employers WHERE company_id={$companyId}");
     echo 'Новые сотрудники после обновления данных<br>';
     while ($row = $employers->fetch_assoc()) {
         ?>
